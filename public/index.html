@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Example UI</title>
+  <style>
+    /* Reset margins/padding */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    
+    /* Outer black frame always 40px from each edge */
+    .outer-frame {
+      position: fixed;
+      top: 40px;
+      right: 40px;
+      bottom: 40px;
+      left: 40px;
+      border: 2px solid #000;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    /* Browser header with black divider */
+    .browser-header {
+      padding: 10px;
+      border-bottom: 2px solid #000;
+      margin-bottom: 10px;
+    }
+    
+    .browser-controls {
+      display: flex;
+      align-items: center;
+    }
+    
+    .browser-controls span {
+      margin-right: 8px;
+    }
+    
+    /* Row for left/right buttons that sits below the header divider */
+    .links-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .links-row a {
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+    }
+    
+    /* Center underlined button vertically centered within outer-frame */
+    .center-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    
+    .center-button a {
+      text-decoration: underline;
+      color: #000;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="outer-frame">
+    <!-- Browser header with controls and divider -->
+    <div class="browser-header">
+      <div class="browser-controls">
+        <span>x</span>
+        <span>O</span>
+        <span>&lt;&gt;</span>
+      </div>
+    </div>
+    
+    <!-- Left and right buttons below the divider -->
+    <div class="links-row">
+      <a href="#" class="left-link">get.money</a>
+      <a href="#" class="right-link">how it works</a>
+    </div>
+    
+    <!-- Center underlined button -->
+    <div class="center-button">
+      <a href="#" id="getMoneyButton">get money</a>
+    </div>
+  </div>
+  
+  <!-- Load the Keplr integration code -->
+  <script src="keplr.js"></script>
+</body>
+</html>

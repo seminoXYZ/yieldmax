@@ -1,4 +1,14 @@
 {
   "name": "get.money",
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@1.22.5",
+  "scripts": {
+    "start": "node server.js",
+    "start:docker": "docker-compose up",
+    "dev": "nodemon server.js",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
